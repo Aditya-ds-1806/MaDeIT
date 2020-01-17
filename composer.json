@@ -1,0 +1,14 @@
+{
+    "name": "aditya_ds/madeit",
+    "description": "Landing page for MaDeIT Innovation Foundation",
+    "type": "project",
+    "require": {
+        "twig/twig": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Aditya D.S.",
+            "email": "esd8i001@iiitdm.ac.in"
+        }
+    ]
+}

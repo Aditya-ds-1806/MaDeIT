@@ -1,0 +1,19 @@
+<div class="scrolling-wrapper">
+    {% for i in 0 .. 9 %}
+        <div class="card bg-dark text-white w-50 shadow
+        {% if loop.first %}
+        {{ 'mr-4' }}
+        {% elseif loop.last %}
+        {{ 'ml-4' }}
+        {% else %}
+        {{ 'mx-4' }}
+        {% endif %}
+        ">
+            <img src="/public/images/logo.png" class="card-img" alt="">
+            <div class="card-img-overlay">
+                <h5 class="card-title">{{loop.index}}. Bacon ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 my-5">
+        {% for j in 0 .. 5 %}
+            <div class="col mb-4">
+                <div class="card border-mountain-meadow text-left h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-body">Workshop
+                        {% if j < 2 %}
+                            <span class="badge bg-mountain-meadow text-white float-right">New</span>
+                        {% endif %}
+                        </h5>
+                        <p class="card-text">Developing Excellent concepts that are manufacturable and meet your business requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <button class="btn btn-outline-emperor text-center px-5 py-3">View more</button>
+</div>

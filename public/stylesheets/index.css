@@ -1,0 +1,56 @@
+header.hero-image {
+	height: 100vh;
+	position: relative;
+	background-image: url('../images/Path_7580.svg'), url('../images/Path_7584.svg'), url('../images/Path_7582.svg');
+	background-size: 40%, 30%, contain;
+	background-position: left -90px, 85vw center, 0 66vh;
+	background-repeat: no-repeat;
+}
+
+div.hero-text {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+div.scrolling-wrapper {
+	/* Chrome, opera, safari */
+	scroll-behavior: smooth;
+	display: flex;
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+div.scrolling-wrapper div.card {
+	flex: 0 0 auto;
+}
+
+/* chrome, opera, safari */
+.scrolling-wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+/* IE, edge */
+.scrolling-wrapper {
+	-ms-overflow-style: none;
+}
+
+img.card-img {
+	filter: brightness(20%);
+}
+
+#programmes i.fa-chevron-circle-left {
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	left: 0px;
+}
+
+#programmes i.fa-chevron-circle-right {
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	right: 0px;
+}

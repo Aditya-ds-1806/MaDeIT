@@ -1,0 +1,91 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+}
+
+body {
+	font-weight: 400;
+	font-size: 14px;
+}
+
+/* text colors */
+
+.text-mountain-meadow {
+	color: rgb(20, 167, 157);
+}
+
+.text-sea-buckthorn {
+	color: rgb(247, 152, 39);
+}
+
+/* bg colors */
+
+.bg-mountain-meadow {
+	background-color: rgb(20, 167, 157);
+}
+
+.bg-sea-buckthorn {
+	background-color: rgb(247, 152, 39);
+}
+
+.bg-wild-sand {
+	background-color: #f5f5f5;
+}
+
+/* border-colors */
+
+.border-sea-buckthorn {
+	border: 1px solid rgb(247, 152, 39);
+}
+
+.border-mountain-meadow {
+	border: 1px solid rgb(20, 167, 157);
+}
+
+/* buttons */
+
+.btn-mountain-meadow {
+	background-color: rgb(20, 167, 157);
+}
+
+.btn-mountain-meadow:focus,
+.btn-outline-mountain-meadow:focus {
+	box-shadow: 0 0 0 0.2rem rgba(20, 167, 157, 0.5);
+}
+
+.btn-outline-mountain-meadow {
+	border: 2px solid rgb(20, 167, 157);
+	transition: background-color 400ms, color 400ms;
+}
+
+.btn-outline-mountain-meadow:hover {
+	color: #fff;
+	background-color: rgb(20, 167, 157);
+}
+
+.btn-sea-buckthorn {
+	background-color: rgb(247, 152, 39);
+}
+
+.btn-sea-buckthorn:focus {
+	box-shadow: 0 0 0 0.2rem rgba(247, 152, 39, 0.5);
+}
+
+.btn-outline-emperor {
+	color: #505050;
+	border: 2px solid #505050;
+}
+
+.btn-outline-emperor:focus {
+	box-shadow: 0 0 0 0.2rem rgba(80, 80, 80, 0.5);
+}
+
+.btn-outline-emperor:hover {
+	background-color: #505050;
+	color: #fff;
+	transition: background-color 400ms, color 400ms;
+}

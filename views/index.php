@@ -2,7 +2,7 @@
 <?php $loader = new \Twig\Loader\FilesystemLoader('../views/'); ?>
 <?php $twig = new \Twig\Environment($loader); ?>
 
-<?php echo $twig->render('/partials/header.twig') ?>
+<?php echo $twig->render('/partials/header.twig', ['route' => 'index']) ?>
 
 <body>
     <!-- 1. Hero Div and Navbar -->
@@ -11,12 +11,17 @@
         <div class="container hero-text">
             <h1 class="display-4">Believe. Design. Leap.</h1>
             <p class="d-block lead w-75 mx-auto my-3">MaDeIT is a Design Driven Technology Business Incubator to help startups</p>
-            <button class="btn btn-mountain-meadow text-white">Watch Our Story</button>
+            <a href="#story" class="btn btn-mountain-meadow text-white">Watch Our Story</a>
+        </div>
+        <div class="social position-absolute mr-5" style="right: 0; top: 42%">
+            <a href="" target="_blank" class="text-white d-block mb-3"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="" target="_blank" class="text-white d-block my-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="" target="_blank" class="text-white d-block mb-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
         </div>
     </header>
 
     <!-- 2. Statistics -->
-    <section class="container-fluid stats bg-sea-buckthorn text-white text-center p-5">
+    <section class="container-fluid stats bg-sea-buckthorn text-white text-center p-5" id="story">
         <p class="w-50 mx-auto p-4">Developing excellent concepts that are manufacturable and meet your business
             requirements.</p>
         <div class="container">
@@ -50,7 +55,7 @@
             manufacturing, healthcare and transportation sectors. It will support startups from IIITDM's students,
             faculty and the wider ecosystem
         </p>
-        <button class="btn btn-sea-buckthorn text-white">The people</button>
+        <a href="people.php" class="btn btn-sea-buckthorn text-white">The people</a>
         <!-- insert carousel here -->
     </section>
 
@@ -71,7 +76,7 @@
                 <?php echo $twig->render('/partials/startup-card.twig') ?>
             </div>
         </div>
-        <button class="btn btn-outline-emperor px-5 py-3 mb-5">Ongoing</button>
+        <a href="./portfolio.php" class="btn btn-outline-emperor px-5 py-3 mb-5">View more</a href="./portfolio.php">
     </section>
 
     <!-- 5. The Magic -->
@@ -135,7 +140,7 @@
     </section>
 
     <!-- 9. Footer -->
-    <?php echo $twig->render('/partials/footer.twig') ?>
+    <?php echo $twig->render('/partials/footer.twig', ['route' => 'index']) ?>
 </body>
 
 </html>

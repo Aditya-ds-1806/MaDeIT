@@ -1,8 +1,7 @@
 var slider = document.querySelector('div.scrolling-wrapper');
 
-window.onload = function () {
+window.addEventListener('load', function () {
     var max = 0, cycles = 0;
-    setPageProgress();
     cardSlide('right');
     cardSlide('left');
     setInterval(function () {
@@ -14,12 +13,8 @@ window.onload = function () {
             slider.scrollLeft = 0;
         }
         computeScrollPos('right');
-    }, 3000)
-
-    window.onscroll = function () {
-        setPageProgress();
-    }
-}
+    }, 3000);
+});
 
 function cardSlide(dir) {
     var dirBtn;
@@ -40,9 +35,4 @@ function computeScrollPos(dir) {
     } else if (dir === 'left') {
         slider.scrollLeft = slider.scrollLeft - slider.offsetWidth / 3;
     }
-}
-
-function setPageProgress() {
-    var scrollYMax = document.body.scrollHeight - window.innerHeight;
-    document.querySelector('div.progress-bar').setAttribute('style', 'width:' + (window.scrollY / scrollYMax) * 100 + "%");
 }

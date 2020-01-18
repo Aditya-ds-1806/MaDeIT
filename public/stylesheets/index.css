@@ -44,13 +44,13 @@ img.card-img {
 #programmes i.fa-chevron-circle-left {
 	width: 40px;
 	height: 40px;
-	top: 50%;
+	top: calc(50% - 20px);
 	left: 0px;
 }
 
 #programmes i.fa-chevron-circle-right {
 	width: 40px;
 	height: 40px;
-	top: 50%;
+	top: calc(50% - 20px);
 	right: 0px;
 }

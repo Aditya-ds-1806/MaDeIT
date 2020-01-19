@@ -1,5 +1,7 @@
 <footer>
     {% include '/partials/contact.twig' %}
+    {# navbar position control #}
+    <script src="/public/scripts/navbar.js"></script>
     <!-- jquery v3.4.1 -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- popper v1.14.7 -->
@@ -9,6 +11,8 @@
     {# custom scripts #}
     {% if route is same as ('index') %}
         <script src="/public/scripts/slider.js"></script>
+        <script src="/public/scripts/carousel.js"></script>
     {% endif %}
     <script src="/public/scripts/progress-tracker.js"></script>
+    <script src="/public/scripts/post.js"></script>
 </footer>

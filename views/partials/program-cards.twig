@@ -1,6 +1,6 @@
 <div class="scrolling-wrapper">
     {% for i in 0 .. 9 %}
-        <div class="card bg-dark text-white w-50 shadow
+        <div class="card bg-dark text-white w-25 shadow
         {% if loop.first %}
         {{ 'mr-4' }}
         {% elseif loop.last %}
@@ -9,7 +9,7 @@
         {{ 'mx-4' }}
         {% endif %}
         ">
-            <img src="/public/images/logo.png" class="card-img" alt="">
+            <img src="https://picsum.photos/200/250?random={{ loop.index }}" class="card-img h-100" alt="">
             <div class="card-img-overlay">
                 <h5 class="card-title">{{loop.index}}. Bacon ipsum</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet</p>

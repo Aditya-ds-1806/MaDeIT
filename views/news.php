@@ -7,9 +7,9 @@
 <body class="bg-wild-sand">
     <?php echo $twig->render('/partials/navbar.twig'); ?>
     <section class="container">
-        <header class="text-center my-5">
+        <header class="container-fluid d-inline-block text-center mt-5">
             <h1>News and Events</h1>
-            <p class="mx-auto mt-4 w-50">Developing Excellent concepts that are manufacturable and meet your business requirements.
+            <p class="w-100 w-md-75 w-lg-50 mx-auto mt-4">Developing Excellent concepts that are manufacturable and meet your business requirements.
             </p>
         </header>
         <div class="container-fluid my-5 text-center">
@@ -35,7 +35,7 @@
                     </p>
                 </li>
             </ul>
-            <a href="./news.php" class="btn btn-outline-emperor mx-auto px-5 py-3">View more</a>
+            <a href="./news.php" class="btn btn-outline-emperor px-sm-4 py-sm-2 mx-auto">View more</a>
         </div>
     </section>
 

@@ -8,15 +8,15 @@
     <?php echo $twig->render('/partials/navbar.twig') ?>
     <!-- 4. What we have built -->
     <section class="container-fluid bg-wild-sand text-center p-5">
-        <header>
+        <header class="container-fluid d-inline-block text-center mt-5">
             <h1>What we have built</h1>
-            <p class="w-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business
+            <p class="w-100 w-md-75 w-lg-50 mx-auto mt-4">Developing excellent concepts that are manufacturable and meet your business
                 requirements.</p>
             <div class="my-5">
-                <button class="btn btn-outline-mountain-meadow px-5 py-3">Ongoing</button>
-                <button class="btn btn-mountain-meadow text-white px-5 py-3 ml-4">Ongoing</button>
-                <button class="btn btn-mountain-meadow text-white px-5 py-3 ml-4">Ongoing</button>
-                <button class="btn btn-mountain-meadow text-white px-5 py-3 ml-4">Ongoing</button>
+                <button class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2 mx-4 my-2">Ongoing</button>
+                <button class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2 mx-4 my-2">Ongoing</button>
+                <button class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2 mx-4 my-2">Ongoing</button>
+                <button class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2 mx-4 my-2">Ongoing</button>
             </div>
         </header>
         <div class="container text-left mb-5">
@@ -25,7 +25,7 @@
                 <?php echo $twig->render('/partials/startup-card.twig') ?>
             </div>
         </div>
-        <a href="./portfolio.php" class="btn btn-outline-emperor px-5 py-3 mb-5">View more</a href="./portfolio.php">
+        <a href="./portfolio.php" class="btn btn-outline-emperor px-sm-4 py-sm-2 mb-5">View more</a href="./portfolio.php">
     </section>
     <?php echo $twig->render('/partials/footer.twig'); ?>
 </body>

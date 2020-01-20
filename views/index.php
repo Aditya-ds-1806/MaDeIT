@@ -7,13 +7,13 @@
 <body>
     <!-- 1. Hero Div and Navbar -->
     <?php echo $twig->render('/partials/navbar.twig') ?>
-    <header class="container-fluid hero-image pt-4">
+    <header class="container-fluid hero-image pt-4 px-0">
         <div class="container hero-text">
             <h1 class="display-4">Believe. Design. Leap.</h1>
             <p class="d-block mx-auto my-3">MaDeIT is a Design Driven Technology Business Incubator to help startups</p>
             <a href="#story" class="btn btn-mountain-meadow text-white">Watch Our Story</a>
         </div>
-        <div class="social position-absolute mr-5" style="right: 0; top: 41%">
+        <div class="social position-absolute mr-5 hero-social">
             <a href="" target="_blank" class="text-white d-block mb-4"><i class="fab fa-twitter fa-lg"></i></a>
             <a href="" target="_blank" class="text-white d-block my-4"><i class="fab fa-facebook-f fa-lg"></i></a>
             <a href="" target="_blank" class="text-white d-block mb-4"><i class="fab fa-linkedin-in fa-lg"></i></a>
@@ -22,7 +22,7 @@
 
     <!-- 2. Statistics -->
     <section class="container-fluid stats bg-sea-buckthorn text-white text-center p-5" id="story">
-        <p class="w-50 mx-auto p-4">Developing excellent concepts that are manufacturable and meet your business
+        <p class="w-100 w-md-75 w-lg-50 mx-auto p-4">Developing excellent concepts that are manufacturable and meet your business
             requirements.</p>
         <div class="container">
             <div class="row mx-0">
@@ -70,11 +70,11 @@
     <section class="container-fluid bg-wild-sand text-center p-5 mb-5" id="portfolio">
         <header class="mt-5 py-5">
             <h2>What we have built</h2>
-            <p class="w-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business
+            <p class="w-100 w-md-75 w-lg-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business
                 requirements.</p>
             <div class=" mt-3 mb-5">
-                <button class="btn btn-outline-mountain-meadow px-4 py-2">Ongoing</button>
-                <button class="btn btn-mountain-meadow text-white px-4 py-2 ml-4">Ongoing</button>
+                <button class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2">Ongoing</button>
+                <button class="btn btn-mountain-meadow text-white px-sm-4 py-sm-2 ml-sm-4 my-2 my-sm-0">Ongoing</button>
             </div>
         </header>
         <div class="container text-left mb-5">
@@ -88,11 +88,11 @@
 
     <!-- 5. The Magic -->
     <section class="container-fluid px-0 py-5 mb-5">
-        <div class="row m-0 mt-5 py-5">
-            <div class="col-5 pl-0">
+        <div class="row align-items-center m-0 mt-5 py-5">
+            <div class="col-md-6 col-lg-5 px-5 pl-md-0">
                 <img src="https://picsum.photos/seed/picsum/850/550" class="img-fluid">
             </div>
-            <div class="col-5 px-5">
+            <div class="col-md-6 col-lg-7 col-xl-5 px-5 mt-4 mt-md-0">
                 <h4 class="text-sea-buckthorn">THE MAGIC</h4>
                 <h2>What MaDeIT is sample text</h2>
                 <ul class="list-group list-group-flush">
@@ -108,11 +108,11 @@
     </section>
 
     <!-- 6. Incubation Process -->
-    <section class="container mb-5 py-5">
+    <section class="container mb-5 pb-5">
         <div class="container-fluid mt-5 py-5">
             <h4 class="text-sea-buckthorn">INCUBATION PROCESS</h4>
             <h2>How does it happen?</h2>
-            <p class="w-25">Developing excellent concepts that are manufacturable and meet your business</p>
+            <p class="w-100 w-md-50 w-lg-25">Developing excellent concepts that are manufacturable and meet your business</p>
             <div class="row row-cols-1 row-cols-md-3">
                 <?php echo $twig->render('/partials/incubation-card.twig') ?>
             </div>

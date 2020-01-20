@@ -13,17 +13,20 @@ window.addEventListener('resize', function (e) {
 window.addEventListener('scroll', function (e) {
     e.preventDefault();
     navbarWidthControl();
-    navAnimation();
+    // if (window.scrollY > window.innerHeight) {
+    //     navAnimation();
+    // }
 });
 
-function navAnimation() {
-    if (window.scrollY > prevScrollY) {
-        $('nav').fadeOut();
-    } else {
-        $('nav').fadeIn();
-    }
-    prevScrollY = window.scrollY;
-}
+
+// function navAnimation() {
+//     if (window.scrollY > prevScrollY) {
+//         $('nav').fadeOut();
+//     } else {
+//         $('nav').fadeIn();
+//     }
+//     prevScrollY = window.scrollY;
+// }
 
 function navbarWidthControl() {
     if (window.scrollY > Number(navStyles.marginTop.slice(0, -2))) {

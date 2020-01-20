@@ -6,14 +6,16 @@
 
 <body class="bg-wild-sand">
     <?php echo $twig->render('/partials/navbar.twig'); ?>
-    <div class="container text-center my-5 py-5">
-        <h3 class="text-sea-buckthorn">BEHIND THE SCENES</h3>
-        <h1>The People</h1>
-        <p class="w-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business requirements.
-        </p>
+    <div class="container text-center mb-5 py-5">
+        <header class="container-fluid d-inline-block text-center mt-5">
+            <h3 class="text-sea-buckthorn">BEHIND THE SCENES</h3>
+            <h1>The People</h1>
+            <p class="w-100 w-md-75 w-lg-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business requirements.
+            </p>
+        </header>
         <div class="row row-cols-1 row-cols-lg-2 my-5 py-5">
             <div class="col my-3 my-lg-0">
-                <div class="card border-0 p-5 mx-2 mr-lg-3 mr-xl-5 shadow h-100">
+                <div class="card border-0 px-1 py-3 p-sm-5 mx-2 mr-lg-3 mr-xl-5 shadow h-100">
                     <img src="/public/images/banshidhar_majhi.jpg" class="card-img-top rounded-circle img-fluid w-50 mx-auto" alt="Prof. Banshidhar Majhi">
                     <div class="card-body">
                         <h6 class="card-title">Prof. Banshidhar Majhi</h6>
@@ -27,7 +29,7 @@
                 </div>
             </div>
             <div class="col my-3 my-lg-0">
-                <div class="card border-0 p-5 mx-2 ml-lg-3 ml-xl-5 shadow h-100">
+                <div class="card border-0 px-1 py-3 p-sm-5 mx-2 ml-lg-3 ml-xl-5 shadow h-100">
                     <img src="/public/images/sudhir.jpeg" class="card-img-top rounded-circle img-fluid w-50 mx-auto" alt="Dr. Sudhir Varadarajan">
                     <div class="card-body">
                         <h6 class="card-title">Dr. Sudhir Varadarajan</h6>

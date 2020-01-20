@@ -1,5 +1,5 @@
 {% for i in 0 .. 2 %}
-<div class="col-4 border border-white px-0">
+<div class="{% if loop.first %}col-sm-6 col-lg-4{% endif %}{% if loop.index is same as(2) %}col-sm-6 col-lg-4 d-none d-sm-block{% endif %}{% if loop.last %}col-4 d-none d-lg-block{% endif %} border border-white px-0">
     <div id="carousel{{loop.index}}" class="carousel slide">
     <div class="carousel-inner">
         <div class="carousel-item {% if loop.first %}active{% endif %}">

@@ -1,5 +1,5 @@
-<?php require_once '../vendor/autoload.php'; ?>
-<?php $loader = new \Twig\Loader\FilesystemLoader('../views/'); ?>
+<?php require_once dirname(__DIR__, 1) . '\vendor\autoload.php' ?>
+<?php $loader = new \Twig\Loader\FilesystemLoader('views'); ?>
 <?php $twig = new \Twig\Environment($loader); ?>
 
 <?php echo $twig->render('/partials/header.twig', ['route' => 'index']) ?>
@@ -21,10 +21,10 @@
     </header>
 
     <!-- 2. Statistics -->
-    <section class="container-fluid stats bg-sea-buckthorn text-white text-center p-5" id="story">
-        <p class="w-100 w-md-75 w-lg-50 mx-auto p-4">Developing excellent concepts that are manufacturable and meet your business
-            requirements.</p>
-        <div class="container">
+    <section class="container-fluid stats bg-sea-buckthorn text-white text-center py-5 px-0" id="story">
+        <div class="container my-5">
+            <p class="w-100 w-md-75 w-lg-50 mx-auto p-4">Developing excellent concepts that are manufacturable and meet your business
+                requirements.</p>
             <div class="row mx-0">
                 <div class="col-4">
                     <h1 class="display-3">11 +</h1>
@@ -56,7 +56,7 @@
                 manufacturing, healthcare and transportation sectors. It will support startups from IIITDM's students,
                 faculty and the wider ecosystem
             </p>
-            <a href="people.php" class="btn btn-sea-buckthorn text-white">The people</a>
+            <a href="/people" class="btn btn-sea-buckthorn text-white">The people</a>
         </div>
         <!-- insert carousel here -->
         <div class="container-fluid px-0 my-5 pt-5">
@@ -67,7 +67,7 @@
     </section>
 
     <!-- 4. What we have built -->
-    <section class="container-fluid bg-wild-sand text-center p-5 mb-5" id="portfolio">
+    <section class="container-fluid bg-wild-sand text-center py-5 px-0 mb-5" id="portfolio">
         <header class="mt-5 py-5">
             <h2>What we have built</h2>
             <p class="w-100 w-md-75 w-lg-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business
@@ -83,11 +83,11 @@
                 <?php echo $twig->render('/partials/startup-card.twig') ?>
             </div>
         </div>
-        <a href="./portfolio.php" class="btn btn-outline-emperor px-4 pb-2 mb-5">View more</a href="./portfolio.php">
+        <a href="/portfolio" class="btn btn-outline-emperor px-4 pb-2 mb-5">View more</a href="/portfolio">
     </section>
 
     <!-- 5. The Magic -->
-    <section class="container-fluid px-0 py-5 mb-5">
+    <section class="container-fluid px-0 py-5 px-0">
         <div class="row align-items-center m-0 mt-5 py-5">
             <div class="col-md-6 col-lg-5 px-5 pl-md-0">
                 <img src="https://picsum.photos/seed/picsum/850/550" class="img-fluid">
@@ -108,7 +108,7 @@
     </section>
 
     <!-- 6. Incubation Process -->
-    <section class="container mb-5 pb-5">
+    <section class="container mb-5 py-5">
         <div class="container-fluid mt-5 py-5">
             <h4 class="text-sea-buckthorn">INCUBATION PROCESS</h4>
             <h2>How does it happen?</h2>

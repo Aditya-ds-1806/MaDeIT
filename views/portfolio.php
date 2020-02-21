@@ -1,5 +1,5 @@
-<?php require_once '../vendor/autoload.php'; ?>
-<?php $loader = new \Twig\Loader\FilesystemLoader('../views/'); ?>
+<?php require_once dirname(__DIR__, 1) . '\vendor\autoload.php' ?>
+<?php $loader = new \Twig\Loader\FilesystemLoader('views'); ?>
 <?php $twig = new \Twig\Environment($loader); ?>
 
 <?php echo $twig->render('/partials/header.twig', ['route' => 'index']) ?>
@@ -25,7 +25,7 @@
                 <?php echo $twig->render('/partials/startup-card.twig') ?>
             </div>
         </div>
-        <a href="./portfolio.php" class="btn btn-outline-emperor px-sm-4 py-sm-2 mb-5">View more</a href="./portfolio.php">
+        <a href="/portfolio" class="btn btn-outline-emperor px-sm-4 py-sm-2 mb-5">View more</a>
     </section>
     <?php echo $twig->render('/partials/footer.twig'); ?>
 </body>

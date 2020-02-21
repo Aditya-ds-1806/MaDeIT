@@ -1,5 +1,5 @@
-<?php require_once '../vendor/autoload.php'; ?>
-<?php $loader = new \Twig\Loader\FilesystemLoader('../views/'); ?>
+<?php require_once dirname(__DIR__, 1) . '\vendor\autoload.php' ?>
+<?php $loader = new \Twig\Loader\FilesystemLoader('views'); ?>
 <?php $twig = new \Twig\Environment($loader); ?>
 
 <?php echo $twig->render('/partials/header.twig', ['route' => 'people']); ?>

@@ -1,4 +1,4 @@
-<?php require_once dirname(__DIR__, 1) . '\vendor\autoload.php' ?>
+<?php require_once dirname(__DIR__, 1) . '/vendor/autoload.php' ?>
 <?php $loader = new \Twig\Loader\FilesystemLoader('views'); ?>
 <?php $twig = new \Twig\Environment($loader); ?>
 

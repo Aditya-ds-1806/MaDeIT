@@ -7,13 +7,13 @@
 <body>
     <!-- 1. Hero Div and Navbar -->
     <?php echo $twig->render('/partials/navbar.twig') ?>
-    <header class="container-fluid hero-image pt-4 px-0">
+    <header class="container-fluid hero-image pt-4">
         <div class="container hero-text">
             <h1 class="display-4">Believe. Design. Leap.</h1>
             <p class="d-block mx-auto my-3">MaDeIT is a Design Driven Technology Business Incubator to help startups</p>
             <a href="#story" class="btn btn-mountain-meadow text-white">Watch Our Story</a>
         </div>
-        <div class="social position-absolute mr-5 hero-social">
+        <div class="social position-absolute mr-5 hero-social d-none d-sm-block">
             <a href="" target="_blank" class="text-white d-block mb-4"><i class="fab fa-twitter fa-lg"></i></a>
             <a href="" target="_blank" class="text-white d-block my-4"><i class="fab fa-facebook-f fa-lg"></i></a>
             <a href="" target="_blank" class="text-white d-block mb-4"><i class="fab fa-linkedin-in fa-lg"></i></a>
@@ -21,7 +21,7 @@
     </header>
 
     <!-- 2. Statistics -->
-    <section class="container-fluid stats bg-sea-buckthorn text-white text-center py-5 px-0" id="story">
+    <section class="container-fluid stats bg-sea-buckthorn text-white text-center py-5" id="story">
         <div class="container my-5">
             <p class="w-100 w-md-75 w-lg-50 mx-auto p-4">Developing excellent concepts that are manufacturable and meet your business
                 requirements.</p>
@@ -44,7 +44,7 @@
 
     <!-- 3. About -->
     <section class="container-fluid position-relative py-5 px-0" id="about">
-        <div class="container text-center mt-5">
+        <div class="container text-center mt-5 py-5">
             <h5 class="text-sea-buckthorn">OUR STORY</h5>
             <h2>About MaDeIT</h2>
             <p class="my-4">MaDeIT Innovation Foundation is a non-profit Section 8 company under the Companies Act, 2013. It is a
@@ -59,7 +59,7 @@
             <a href="/people" class="btn btn-sea-buckthorn text-white">The people</a>
         </div>
         <!-- insert carousel here -->
-        <div class="container-fluid px-0 my-5 pt-5">
+        <div class="container-fluid px-0 my-5 py-5">
             <div class="row m-0">
                 <?php echo $twig->render('/partials/carousel.twig') ?>
             </div>
@@ -67,8 +67,8 @@
     </section>
 
     <!-- 4. What we have built -->
-    <section class="container-fluid bg-wild-sand text-center py-5 px-0 mb-5" id="portfolio">
-        <header class="mt-5 py-5">
+    <section class="container-fluid bg-wild-sand text-center py-5" id="portfolio">
+        <header class="mt-5 pt-5">
             <h2>What we have built</h2>
             <p class="w-100 w-md-75 w-lg-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business
                 requirements.</p>
@@ -77,22 +77,22 @@
                 <button class="btn btn-mountain-meadow text-white px-sm-4 py-sm-2 ml-sm-4 my-2 my-sm-0">Ongoing</button>
             </div>
         </header>
-        <div class="container text-left mb-5">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center">
+        <div class="container text-center mb-5 pb-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center text-left">
                 <!-- Add template here -->
                 <?php echo $twig->render('/partials/startup-card.twig') ?>
             </div>
+            <a href="/portfolio" class="btn btn-outline-emperor px-4 pb-2 mt-5">View more</a href="/portfolio">
         </div>
-        <a href="/portfolio" class="btn btn-outline-emperor px-4 pb-2 mb-5">View more</a href="/portfolio">
     </section>
 
     <!-- 5. The Magic -->
     <section class="container-fluid px-0 py-5 px-0">
-        <div class="row align-items-center m-0 mt-5 py-5">
+        <div class="row align-items-center pt-5 mt-5 mr-0">
             <div class="col-md-6 col-lg-5 px-5 pl-md-0">
                 <img src="https://picsum.photos/seed/picsum/850/550" class="img-fluid">
             </div>
-            <div class="col-md-6 col-lg-7 col-xl-5 px-5 mt-4 mt-md-0">
+            <div class="col-md-6 col-lg-7 col-xl-5 px-5 mt-5 mt-md-0">
                 <h4 class="text-sea-buckthorn">THE MAGIC</h4>
                 <h2>What MaDeIT is sample text</h2>
                 <ul class="list-group list-group-flush">
@@ -108,12 +108,12 @@
     </section>
 
     <!-- 6. Incubation Process -->
-    <section class="container mb-5 py-5">
-        <div class="container-fluid mt-5 py-5">
+    <section class="container mt-5 py-5">
+        <div class="container-fluid pb-5 mb-5">
             <h4 class="text-sea-buckthorn">INCUBATION PROCESS</h4>
             <h2>How does it happen?</h2>
             <p class="w-100 w-md-50 w-lg-25">Developing excellent concepts that are manufacturable and meet your business</p>
-            <div class="row row-cols-1 row-cols-md-3">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 <?php echo $twig->render('/partials/incubation-card.twig') ?>
             </div>
         </div>
@@ -121,7 +121,7 @@
 
     <!-- 7. Programmes -->
     <section class="container-fluid bg-wild-sand mb-5 py-5" id="programmes">
-        <div class="container py-5 mt-5">
+        <div class="container py-5 my-5">
             <div class="text-center">
                 <h2>Programmes</h2>
                 <p>Developing excellent concepts that are manufacturable and meet your business</p>
@@ -136,7 +136,7 @@
     </section>
 
     <!-- 8. News and Events -->
-    <section class="container-fluid text-center mx-auto mb-5 py-5" id="news">
+    <section class="container-fluid text-center mx-auto py-5 my-5" id="news">
         <h2 class="my-4">News and Events</h2>
         <p class="w-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business</p>
         <?php echo $twig->render('/partials/news-card.twig') ?>

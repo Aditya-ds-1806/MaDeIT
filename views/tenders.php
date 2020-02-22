@@ -8,11 +8,13 @@
     <?php echo $twig->render('/partials/navbar.twig'); ?>
     <section class="container">
         <header class="container-fluid d-inline-block text-center mt-5">
-            <h1>Tenders</h1>
-            <p class="w-100 w-md-75 w-lg-50 mx-auto mt-4">Developing Excellent concepts that are manufacturable and meet your business requirements.
-            </p>
+            <div class="pt-5">
+                <h1>Tenders</h1>
+                <p class="w-100 w-md-75 w-lg-50 mx-auto mt-4">Developing Excellent concepts that are manufacturable and meet your business requirements.
+                </p>
+            </div>
         </header>
-        <div class="container-fluid my-5 text-center">
+        <div class="container-fluid my-5 pb-5 text-center">
             <ul class="list-group list-group-flush text-left py-5">
                 <li class="list-group-item bg-wild-sand pl-0 pt-4">
                     <h5>Workshop<span class="badge bg-sea-buckthorn text-white float-right">New</span></h5>

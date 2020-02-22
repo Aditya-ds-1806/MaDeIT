@@ -8,10 +8,12 @@
     <?php echo $twig->render('/partials/navbar.twig'); ?>
     <div class="container text-center mb-5 py-5">
         <header class="container-fluid d-inline-block text-center mt-5">
-            <h3 class="text-sea-buckthorn">BEHIND THE SCENES</h3>
-            <h1>The People</h1>
-            <p class="w-100 w-md-75 w-lg-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business requirements.
-            </p>
+            <div class="pt-5">
+                <h3 class="text-sea-buckthorn">BEHIND THE SCENES</h3>
+                <h1>The People</h1>
+                <p class="w-100 w-md-75 w-lg-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business requirements.
+                </p>
+            </div>
         </header>
         <div class="row row-cols-1 row-cols-lg-2 my-5 py-5">
             <div class="col my-3 my-lg-0">

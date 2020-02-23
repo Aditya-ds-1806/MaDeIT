@@ -29,9 +29,9 @@ $events = json_decode($events, true);
             <a href="#story" class="btn btn-mountain-meadow text-white">Watch Our Story</a>
         </div>
         <div class="social position-absolute mr-5 hero-social d-none d-sm-block">
-            <a href="" target="_blank" class="text-white d-block mb-4"><i class="fab fa-twitter fa-lg"></i></a>
-            <a href="" target="_blank" class="text-white d-block my-4"><i class="fab fa-facebook-f fa-lg"></i></a>
-            <a href="" target="_blank" class="text-white d-block mb-4"><i class="fab fa-linkedin-in fa-lg"></i></a>
+            <a href="https://twitter.com/MaDeITInnovati1" target="_blank" class="text-white d-block mb-4"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="https://www.facebook.com/madeit.iiitdm.kancheepuram/" target="_blank" class="text-white d-block my-4"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="https://in.linkedin.com/in/madeit-innovation-foundation-066b74193" target="_blank" class="text-white d-block mb-4"><i class="fab fa-linkedin-in fa-lg"></i></a>
         </div>
     </header>
 

@@ -7,11 +7,6 @@ window.addEventListener('resize', function (e) {
     e.preventDefault();
     bgImageResize();
     bgPosAdjust();
-    if (this.window.innerWidth < 576) {
-        hero.style.backgroundImage = "url(/public/images/Mask_Group_9.svg), none, url(/public/images/Mask_Group_7.svg)"
-    } else {
-        hero.style.backgroundImage = "url(/public/images/Mask_Group_9.svg), url(/public/images/Mask_Group_8.svg), url(/public/images/Mask_Group_7.svg)"
-    }
 });
 
 function bgImageResize() {

@@ -23,12 +23,12 @@ $events = json_decode($events, true);
     <!-- 1. Hero Div and Navbar -->
     <?php echo $twig->render('/partials/navbar.twig') ?>
     <header class="container-fluid hero-image pt-4">
-        <div class="container hero-text">
-            <h1 class="display-4">Believe. Design. Leap.</h1>
-            <p class="d-block mx-auto my-3">MaDeIT is a Design Driven Technology Business Incubator to help startups</p>
+        <div class="container hero-text text-left text-sm-center">
+            <h1 class="display-4 w-50 w-sm-100">Believe. Design. Leap.</h1>
+            <p class="d-block my-3 w-75 w-sm-100">MaDeIT is a Design Driven Technology Business Incubator to help startups</p>
             <a href="#story" class="btn btn-mountain-meadow text-white">Watch Our Story</a>
         </div>
-        <div class="social position-absolute mr-5 hero-social d-none d-sm-block">
+        <div class="social position-absolute mr-5 hero-social">
             <a href="https://twitter.com/MaDeITInnovati1" target="_blank" class="text-white d-block mb-4"><i class="fab fa-twitter fa-lg"></i></a>
             <a href="https://www.facebook.com/madeit.iiitdm.kancheepuram/" target="_blank" class="text-white d-block my-4"><i class="fab fa-facebook-f fa-lg"></i></a>
             <a href="https://in.linkedin.com/in/madeit-innovation-foundation-066b74193" target="_blank" class="text-white d-block mb-4"><i class="fab fa-linkedin-in fa-lg"></i></a>

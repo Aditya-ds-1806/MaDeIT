@@ -1,4 +1,4 @@
-{% for j in 0 .. 5 %}
+{% for j in 0 .. incubation|length - 1 %}
     <div class="col mb-4">
         <div class="card border-sea-buckthorn h-100">
             <div class="row align-items-center m-0">
@@ -6,9 +6,8 @@
                     <h1 class="display-4 mb-0">{{loop.index}}</h1>
                 </div>
                 <div class="card-body col-9 float-right pl-0">
-                    <h5 class="card-title">Pre Incubation</h5>
-                    <p class="card-text">Initial Screening Of Application
-                    </p>
+                    <h5 class="card-title">{{incubation[j]['stage']}}</h5>
+                    <p class="card-text">{{incubation[j]['description']}}</p>
                 </div>
             </div>
         </div>

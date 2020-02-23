@@ -2,7 +2,11 @@
 <?php $loader = new \Twig\Loader\FilesystemLoader('views'); ?>
 <?php $twig = new \Twig\Environment($loader); ?>
 
-<?php echo $twig->render('/partials/header.twig', ['route' => 'people']); ?>
+<?php
+echo $twig->render('/partials/header.twig', ['route' => 'people']);
+$events = file_get_contents('json/events.json', true);
+$events = json_decode($events, true);
+?>
 
 <body class="bg-wild-sand">
     <?php echo $twig->render('/partials/navbar.twig'); ?>
@@ -16,28 +20,22 @@
         </header>
         <div class="container-fluid my-5 pb-5 text-center">
             <ul class="list-group list-group-flush text-left py-5">
-                <li class="list-group-item bg-wild-sand pl-0 pt-4">
-                    <h5>Workshop<span class="badge bg-sea-buckthorn text-white float-right">New</span></h5>
-                    <p>Developing Excellent concepts that are manufacturable and meet your business requirements.
-                    </p>
-                </li>
-                <li class="list-group-item bg-wild-sand pl-0 pt-4">
-                    <h5>Workshop<span class="badge bg-sea-buckthorn text-white float-right">New</span></h5>
-                    <p>Developing Excellent concepts that are manufacturable and meet your business requirements.
-                    </p>
-                </li>
-                <li class="list-group-item bg-wild-sand pl-0 pt-4">
-                    <h5>Workshop</h5>
-                    <p>Developing Excellent concepts that are manufacturable and meet your business requirements.
-                    </p>
-                </li>
-                <li class="list-group-item bg-wild-sand pl-0 pt-4">
-                    <h5>Workshop</h5>
-                    <p>Developing Excellent concepts that are manufacturable and meet your business requirements.
-                    </p>
-                </li>
+                <?php
+                for ($i = 0; $i < count($events); $i++) {
+                    if ($events[$i]['isNew']) {
+                        echo '<li class="list-group-item bg-wild-sand pl-0 pt-4">
+                        <h5 class="text-sea-buckthorn">' . $events[$i]['title'] . '<span class="badge bg-sea-buckthorn text-white float-right">New</span>' . '</h5>
+                        <p>' . $events[$i]['description'] . '</p>
+                        </li>';
+                    } else {
+                        echo '<li class="list-group-item bg-wild-sand pl-0 pt-4">
+                        <h5 class="text-sea-buckthorn">' . $events[$i]['title'] . '</h5>
+                        <p>' . $events[$i]['description'] . '</p>
+                        </li>';
+                    }
+                }
+                ?>
             </ul>
-            <a href="/news" class="btn btn-outline-emperor px-sm-4 py-sm-2 mx-auto">View more</a>
         </div>
     </section>
 

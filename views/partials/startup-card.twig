@@ -1,14 +1,59 @@
-{% for i in 0 .. 5 %}
-    <div class="col p-0 mb-5 mb-sm-0 p-sm-4"> {# Use px-5 py-4 if doesn't work out #}
-        <div class="card shadow border-0 p-3 h-100">
-            <div>
-                <span class="badge bg-mountain-meadow text-white position-absolute p-2 m-3" style="top: 10px; right:10px">Bio-medical</span>
-            </div>
-            <img src="https://picsum.photos/600/400?random={{ loop.index }}" class="card-img-top" alt="">
-            <div class="card-body">
-                <h5 class="card-title text-mountain-meadow mb-0">Olog Logistics</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet</p>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center text-left">
+
+{% if len is same as ('full') %}
+    {% set l = startups[status]|length - 1 %}
+{% else %}
+    {% set l = min(startups[status]|length, len) - 1 %}
+{% endif %}
+
+{% if tag is defined %}
+    {% for i in 0 .. startups['ongoing']|length - 1 %}
+        {% if tag == startups['ongoing'][i]['tag'] %}
+        <div class="col p-0 mb-5 mb-sm-0 p-sm-4"> {# Use px-5 py-4 if doesn't work out #}
+            <div class="card shadow border-0 p-3 h-100">
+                <div>
+                    <span class="badge bg-mountain-meadow text-white position-absolute p-2 m-3" style="top: 10px; right:10px">{{ startups['ongoing'][i]['tag'] }}</span>
+                </div>
+                <a href="{{ startups['ongoing'][i]['website'] }}"><img src="{{ startups['ongoing'][i]['logo'] }}" class="card-img-top" alt="{{ startups['ongoing'][i]['name'] }}" height="200px"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-mountain-meadow mb-0">{{ startups['ongoing'][i]['name'] }}</h5>
+                    <p class="card-text">{{ startups['ongoing'][i]['description'] }}</p>
+                </div>
             </div>
         </div>
-    </div>
-{% endfor %}
+        {% endif %}
+    {% endfor %}
+    {% for i in 0 .. startups['graduated']|length - 1 %}
+        {% if tag == startups['graduated'][i]['tag'] %}
+        <div class="col p-0 mb-5 mb-sm-0 p-sm-4"> {# Use px-5 py-4 if doesn't work out #}
+            <div class="card shadow border-0 p-3 h-100">
+                <div>
+                    <span class="badge bg-mountain-meadow text-white position-absolute p-2 m-3" style="top: 10px; right:10px">{{ startups['graduated'][i]['tag'] }}</span>
+                </div>
+                <a href="{{ startups['graduated'][i]['website'] }}"><img src="{{ startups['graduated'][i]['logo'] }}" class="card-img-top" alt="{{ startups['graduated'][i]['name'] }}" height="200px"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-mountain-meadow mb-0">{{ startups['graduated'][i]['name'] }}</h5>
+                    <p class="card-text">{{ startups['graduated'][i]['description'] }}</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+{% else %}
+    {% for i in 0 .. l %}
+        <div class="col p-0 mb-5 mb-sm-0 p-sm-4"> {# Use px-5 py-4 if doesn't work out #}
+            <div class="card shadow border-0 p-3 h-100">
+                <div>
+                    <span class="badge bg-mountain-meadow text-white position-absolute p-2 m-3" style="top: 10px; right:10px">{{ startups[status][i]['tag'] }}</span>
+                </div>
+                <a href="{{ startups[status][i]['website'] }}"><img src="{{ startups[status][i]['logo'] }}" class="card-img-top" alt="{{ startups[status][i]['name'] }}" height="200px"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-mountain-meadow mb-0">{{ startups[status][i]['name'] }}</h5>
+                    <p class="card-text">{{ startups[status][i]['description'] }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
+
+</div>

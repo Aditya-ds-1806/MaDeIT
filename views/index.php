@@ -2,7 +2,22 @@
 <?php $loader = new \Twig\Loader\FilesystemLoader('views'); ?>
 <?php $twig = new \Twig\Environment($loader); ?>
 
-<?php echo $twig->render('/partials/header.twig', ['route' => 'index']) ?>
+<?php
+echo $twig->render('/partials/header.twig', ['route' => 'index']);
+
+$startups = file_get_contents('json/startups.json', true);
+$startups = json_decode($startups, true);
+
+$programs = file_get_contents('json/programs.json', true);
+$programs = json_decode($programs, true);
+
+$incubation = file_get_contents('json/incubation.json', true);
+$incubation = json_decode($incubation, true);
+
+$events = file_get_contents('json/events.json', true);
+$events = json_decode($events, true);
+?>
+
 
 <body>
     <!-- 1. Hero Div and Navbar -->
@@ -20,23 +35,24 @@
         </div>
     </header>
 
+
     <!-- 2. Statistics -->
     <section class="container-fluid stats bg-sea-buckthorn text-white text-center py-5" id="story">
-        <div class="container my-5">
+        <div class="container-lg my-5">
             <p class="w-100 w-md-75 w-lg-50 mx-auto p-4">Developing excellent concepts that are manufacturable and meet your business
                 requirements.</p>
             <div class="row mx-0">
-                <div class="col-4">
-                    <h1 class="display-3">11 +</h1>
-                    <p>Lorem ipsum</p>
+                <div class="col-12 col-md-4">
+                    <h1 class="display-3">25</h1>
+                    <p class="font-weight-bold">STARTUPS</p>
                 </div>
-                <div class="col-4">
-                    <h1 class="display-3">11 +</h1>
-                    <p>Lorem ipsum</p>
+                <div class="col-12 col-md-4">
+                    <h1 class="display-3">&#8377 2 Cr</h1>
+                    <p class="font-weight-bold">FUNDS RAISED</p>
                 </div>
-                <div class="col-4">
-                    <h1 class="display-3">11 +</h1>
-                    <p>Lorem ipsum</p>
+                <div class="col-12 col-md-4">
+                    <h1 class="display-3">11</h1>
+                    <p class="font-weight-bold">LOREM IPSUM</p>
                 </div>
             </div>
         </div>
@@ -56,9 +72,8 @@
                 manufacturing, healthcare and transportation sectors. It will support startups from IIITDM's students,
                 faculty and the wider ecosystem
             </p>
-            <a href="/people" class="btn btn-sea-buckthorn text-white">The people</a>
+            <a href="/people" class="btn btn-sea-buckthorn text-white">Know More</a>
         </div>
-        <!-- insert carousel here -->
         <div class="container-fluid px-0 my-5 py-5">
             <div class="row m-0">
                 <?php echo $twig->render('/partials/carousel.twig') ?>
@@ -72,25 +87,33 @@
             <h2>What we have built</h2>
             <p class="w-100 w-md-75 w-lg-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business
                 requirements.</p>
-            <div class=" mt-3 mb-5">
-                <button class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2">Ongoing</button>
-                <button class="btn btn-mountain-meadow text-white px-sm-4 py-sm-2 ml-sm-4 my-2 my-sm-0">Ongoing</button>
-            </div>
+            <ul class="nav nav-pills justify-content-center my-5" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="btn btn-outline-mountain-meadow active px-sm-4 py-sm-2" id="ongoing" data-toggle="pill" href="#ongoing-tab" role="tab">Ongoing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2 ml-sm-4 my-2 my-sm-0" id="graduated" data-toggle="pill" href="#graduated-tab" role="tab">Graduated</a>
+                </li>
+            </ul>
         </header>
         <div class="container text-center mb-5 pb-5">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center text-left">
-                <!-- Add template here -->
-                <?php echo $twig->render('/partials/startup-card.twig') ?>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="ongoing-tab" role="tabpanel">
+                    <?php echo $twig->render('/partials/startup-card.twig', ['startups' => $startups, 'status' => 'ongoing', 'len' => '6']) ?>
+                </div>
+                <div class="tab-pane fade" id="graduated-tab" role="tabpanel">
+                    <?php echo $twig->render('/partials/startup-card.twig', ['startups' => $startups, 'status' => 'graduated', 'len' => 6]) ?>
+                </div>
             </div>
-            <a href="/portfolio" class="btn btn-outline-emperor px-4 pb-2 mt-5">View more</a href="/portfolio">
+            <a href="/portfolio" class="btn btn-outline-emperor px-4 pb-2 mt-5">View more</a>
         </div>
     </section>
 
     <!-- 5. The Magic -->
     <section class="container-fluid px-0 py-5 px-0">
         <div class="row align-items-center pt-5 mt-5 mr-0">
-            <div class="col-md-6 col-lg-5 px-5 pl-md-0">
-                <img src="https://picsum.photos/seed/picsum/850/550" class="img-fluid">
+            <div class="col-md-6 col-lg-5 col-xl-6 px-5 pl-md-0">
+                <img src="../public/images/carousel/1.jpg" class="img-fluid w-100">
             </div>
             <div class="col-md-6 col-lg-7 col-xl-5 px-5 mt-5 mt-md-0">
                 <h4 class="text-sea-buckthorn">THE MAGIC</h4>
@@ -98,7 +121,7 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item py-3 pl-0">Developing Excellent concepts that are manufacturable and meet your business requirements.
                     </li>
-                    <li class="list-group-item py-3 pl-0">Availability of Design-Oriented Engineering interns (products of IIITDM's unique curriculum)
+                    <li class="list-group-item py-3 pl-0">Availability of Design-Oriented Engineering interns (products of IIITDM's unique curriculum).
                     </li>
                     <li class="list-group-item py-3 pl-0">Access to Design studio with Rapid prototyping, Manufacturing and Measurement tools.
                     </li>
@@ -112,9 +135,9 @@
         <div class="container-fluid pb-5 mb-5">
             <h4 class="text-sea-buckthorn">INCUBATION PROCESS</h4>
             <h2>How does it happen?</h2>
-            <p class="w-100 w-md-50 w-lg-25">Developing excellent concepts that are manufacturable and meet your business</p>
+            <p class="w-100 w-md-50">Developing excellent concepts that are manufacturable and meet your business</p>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                <?php echo $twig->render('/partials/incubation-card.twig') ?>
+                <?php echo $twig->render('/partials/incubation-card.twig', ['incubation' => $incubation]) ?>
             </div>
         </div>
     </section>
@@ -128,7 +151,7 @@
                 <button class="btn btn-mountain-meadow text-white">Know more</button>
             </div>
             <div class="position-relative mt-5">
-                <?php echo $twig->render('/partials/program-cards.twig') ?>
+                <?php echo $twig->render('/partials/program-cards.twig', ['programs' => $programs]) ?>
                 <i class="fa fa-chevron-circle-left rounded-circle position-absolute text-mountain-meadow bg-white fa-3x"></i>
                 <i class="fa fa-chevron-circle-right rounded-circle position-absolute text-mountain-meadow bg-white fa-3x"></i>
             </div>
@@ -139,7 +162,7 @@
     <section class="container-fluid text-center mx-auto py-5 my-5" id="news">
         <h2 class="my-4">News and Events</h2>
         <p class="w-50 mx-auto">Developing excellent concepts that are manufacturable and meet your business</p>
-        <?php echo $twig->render('/partials/news-card.twig') ?>
+        <?php echo $twig->render('/partials/news-card.twig', ['events' => $events, 'len' => 6]) ?>
     </section>
 
     <!-- 9. Footer -->

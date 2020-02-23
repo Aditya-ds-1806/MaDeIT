@@ -1,18 +1,10 @@
 <div class="scrolling-wrapper">
-    {% for i in 0 .. 9 %}
-        <div class="card bg-dark text-white w-100 w-sm-50 w-lg-25 border-0 shadow
-        {% if loop.first %}
-        {{ 'mr-4' }}
-        {% elseif loop.last %}
-        {{ 'ml-4' }}
-        {% else %}
-        {{ 'mx-4' }}
-        {% endif %}
-        ">
-            <img src="https://picsum.photos/200/250?random={{ loop.index }}" class="card-img h-100" alt="">
-            <div class="card-img-overlay">
-                <h5 class="card-title">{{loop.index}}. Bacon ipsum</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet</p>
+    {% for i in 0 .. programs|length - 1 %}
+        <div class="card bg-white text-white w-100 w-sm-50 w-lg-25 border-0 mx-4">
+            <img src="{{ programs[i]['image'] }}" class="card-img-top border-0 m-0" alt="{{ programs[i]['name'] }}">
+            <div class="card-body rounded text-dark">
+                <h5 class="card-title">{{ programs[i]['program'] }}</h5>
+                <p class="card-text">{{ programs[i]['description'] }}</p>
             </div>
         </div>
     {% endfor %}

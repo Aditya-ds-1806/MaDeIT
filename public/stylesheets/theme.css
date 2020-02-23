@@ -12,6 +12,10 @@ body {
 	font-size: 14px;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 *::selection {
 	background-color: rgb(20, 167, 157);
 	color: #fff;
@@ -179,11 +183,5 @@ a.text-sea-buckthorn:hover {
 
 	.w-xl-100 {
 		width: 100% !important;
-	}
-}
-
-@media(min-width:1600px) {
-	* {
-		font-size: calc(100% + 0.1vw);
 	}
 }

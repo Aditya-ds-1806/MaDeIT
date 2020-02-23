@@ -1,16 +1,15 @@
 <div class="container mb-4">
     <div class="row row-cols-1 row-cols-md-3 my-5">
-        {% for j in 0 .. 5 %}
+        {% for j in 0 .. min(events|length, len) - 1 %}
             <div class="col mb-4">
                 <div class="card border-mountain-meadow text-left h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-body">Workshop
-                        {% if j < 2 %}
+                        <a href="{{events[j]['href']}}"><h5 class="card-title text-dark">{{events[j]['title']}}
+                        {% if events[j]['isNew'] %}
                             <span class="badge bg-mountain-meadow text-white float-right">New</span>
                         {% endif %}
-                        </h5>
-                        <p class="card-text">Developing Excellent concepts that are manufacturable and meet your business requirements.
-                        </p>
+                        </h5></a>
+                        <p class="card-text">{{events[j]['description']}}</p>
                     </div>
                 </div>
             </div>

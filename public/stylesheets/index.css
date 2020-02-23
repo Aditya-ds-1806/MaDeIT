@@ -22,12 +22,11 @@ div.hero-social {
 }
 
 div.scrolling-wrapper {
-	/* Chrome, opera, safari */
 	scroll-behavior: smooth;
 	display: flex;
 	overflow-x: auto;
 	flex-wrap: nowrap;
-	height: 300px;
+	height: 400px;
 }
 
 div.scrolling-wrapper div.card {
@@ -44,10 +43,6 @@ div.scrolling-wrapper div.card {
 	-ms-overflow-style: none;
 }
 
-img.card-img {
-	filter: brightness(50%);
-}
-
 #programmes i.fa-chevron-circle-left {
 	width: 40px;
 	height: 40px;
@@ -62,6 +57,11 @@ img.card-img {
 	top: calc(50% - 20px);
 	right: -20px;
 	cursor: pointer;
+}
+
+#portfolio a.btn-outline-mountain-meadow.active {
+	color: #fff;
+	background-color: rgb(20, 167, 157);
 }
 
 #about p {

@@ -1,10 +1,10 @@
-{% for i in 0 .. 5 %}
+{% for i in 0 .. (people|length - 1) %}
 <div class="col my-4">
     <div class="card border-0 p-3 mx-4 shadow h-100">
-        <img src="/public/images/sudhir.jpeg" class="card-img-top rounded-circle img-fluid w-75 mx-auto" alt="Dr. Harkesh Mittal">
+        <img src="{{ people[i]['image'] }}" class="card-img-top rounded-circle img-fluid w-75 mx-auto" alt="{{ people[i]['name'] }}">
         <div class="card-body">
-            <h6 class="card-title">Dr. Harkesh Mittal</h6>
-            <p class="card-text">Advisor & Head, NSTEDB / Representative</p>
+            <h6 class="card-title">{{ people[i]['name'] }}</h6>
+            <p class="card-text">{{ people[i]['designation'] }}</p>
         </div>
         <div class="card-footer social bg-white border-0">
             <a href="" target="_blank" class="text-sea-buckthorn fa-lg pr-3"><i class="fab fa-linkedin-in"></i></a>

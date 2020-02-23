@@ -89,10 +89,10 @@ $events = json_decode($events, true);
                 requirements.</p>
             <ul class="nav nav-pills justify-content-center my-5" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                    <a class="btn btn-outline-mountain-meadow active px-sm-4 py-sm-2" id="ongoing" data-toggle="pill" href="#ongoing-tab" role="tab">Ongoing</a>
+                    <a class="btn btn-outline-mountain-meadow active px-sm-4 py-sm-2 mr-3" id="ongoing" data-toggle="pill" href="#ongoing-tab" role="tab">Ongoing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2 ml-sm-4 my-2 my-sm-0" id="graduated" data-toggle="pill" href="#graduated-tab" role="tab">Graduated</a>
+                    <a class="btn btn-outline-mountain-meadow px-sm-4 py-sm-2 ml-3" id="graduated" data-toggle="pill" href="#graduated-tab" role="tab">Graduated</a>
                 </li>
             </ul>
         </header>
